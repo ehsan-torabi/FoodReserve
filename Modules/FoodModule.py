@@ -61,7 +61,7 @@ class Food():
     def foodData(foodName):
         # This func get food name and return a row by dataframe type
         foodDataFrame = pd.read_csv(FOOD_DATA_DIR)
-        return pd.DataFrame(Fdata[foodDataFrame['Name'] == foodName])
+        return pd.DataFrame(foodDataFrame[foodDataFrame['Name'] == foodName])
 
     def getPrice(food):
         foodDataFrame = pd.read_csv(FOOD_DATA_DIR)
